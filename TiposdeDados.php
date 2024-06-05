@@ -1,14 +1,14 @@
     <?php
 
+    echo "PRIMEIRA PARTE: NÚMEROS INTEIROS";
+    echo "<br>";
     $num1 = -9;
     $num2 = 2;
     echo "Número 1: " . $num1;
     echo "<br>";
     echo "Número 2: " . $num2;
     echo "<br>";
-    echo "<br>";
-
-
+    //EQUAÇÕES
     echo "Adição: " . ($num1 + $num2);
     echo "<br>";
     echo "Substração: " . ($num1 - $num2);
@@ -30,14 +30,45 @@
     $num4 = 4.5;
     echo "<br>";
     //checar se o número é inteiro, retorna BOOL
-
+    
+    echo "<br>";
+    echo "SEGUNDA PARTE: IF INTEIROS";
+    echo "<br>";
     if (is_int($num4)) {
-        echo "True";
+        echo "INT True";
     } else
-        echo "False";
+        echo "INT False";
 
-    //int, float
+
+    echo "<br>";
+    echo "<br>";
+    echo "TERCEIRA PARTE: NÚMEROS FLOATS";
+    echo "<br>";
 
     $num5 = 0.12313;
+    //echo "<br>";
+    //echo ($num5 + $num1);
     echo "<br>";
-    echo ($num5 + $num1);
+
+    echo "QUARTA PARTE: IF FLOAT";
+    echo "<br>";
+    //checar float
+    $string = "Sou uma string ";
+    if (is_float($num5)) {
+
+        echo "Float True";
+        echo "<br>";
+    } else
+        echo "Float False";
+
+    if (is_float($string)) {
+
+        echo $string . "Float True";
+        echo "<br>";
+    } else
+        echo $string . "Float False";
+    echo "<br>";
+
+    echo "<br>";
+    echo "QUINTA PARTE: STRINGS";
+    echo "<br>";
