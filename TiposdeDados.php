@@ -127,3 +127,60 @@
     echo "SÉTIMA PARTE: BOOLEAN";
     echo "<br>";
     echo "------------------------------------<br>";
+
+
+    if (is_bool(true)) {
+        echo "true";
+        echo "<br>";
+        echo true . "<br>";
+    }
+
+    if (is_bool(false)) {
+        echo "false<br>";
+    }
+
+    if (is_int(2 + 4)) {
+        $resultado = true;
+    } else {
+        $resultado = false;
+    }
+
+    echo "1: $resultado<br>";
+    if (is_bool($resultado)) {
+        echo "é Bool <br>";
+    }
+
+    if (is_int(2 + 4.1)) {
+        $resultado = true;
+    } else {
+        $resultado = false . "0";
+    }
+
+    echo "2: $resultado<br>";
+    if (is_bool($resultado)) {
+        echo "é Bool <br>";
+    } else {
+        echo "Não é Bool." . $resultado;
+    }
+
+    $final = $num5 + $num6;
+    //-22.99997
+    echo "$final";
+    if (is_float($final)) {
+        $resultado = true;
+        $final = $final - 0.00003;
+        echo "<br>$final";
+
+        if (is_bool($resultado)) {
+            echo "<br> final2"; {
+
+                if (is_int($final)) {
+                    echo "<br> final3";
+                    //23.00000
+                    //não imprime
+                }
+            }
+        }
+    }
+    
+    
