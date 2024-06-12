@@ -160,12 +160,12 @@
     if (is_bool($resultado)) {
         echo "é Bool <br>";
     } else {
-        echo "Não é Bool." . $resultado;
+        echo "Não é Bool. " .  $resultado;
     }
 
     $final = $num5 + $num6;
     //-22.99997
-    echo "$final";
+    echo "<br>$final";
     if (is_float($final)) {
         $resultado = true;
         $final = $final - 0.00003;
@@ -182,5 +182,50 @@
             }
         }
     }
-    
-    
+
+    $verdadeiro = true;
+    $falso = 0;
+
+    switch ($verdadeiro && $falso) {
+        case true:
+            echo "<br> verdadeiro";
+            break;
+
+        case false:
+            echo "<br> false";
+            break;
+    }
+
+
+    echo "<br><br>";
+    echo "OITAVA PARTE: ARRAY";
+    echo "<br>";
+
+    echo "------------------------------------<br>";
+    //array, listas, conjuntos
+
+    $chamada = ["Nicole", "Fulano", "Ciclano"];
+    $idades = [21, 25, 36];
+
+    //echo $chamada;
+    echo "<br>" . $chamada[0];
+    echo "<br> $idades[0]";
+    echo "<br>";
+
+    //print readable, human readable
+    print_r($chamada);
+    echo "<br>";
+    print_r($idades[1]);
+    echo "<br>";
+    print_r($num1);
+
+    $moeda = [true,false,1,0];
+    if($moeda[1]=true){
+        echo "<br>Cabeça";
+    }else
+    echo "<br>Coroa";
+
+    if($moeda[0]=false){
+        echo "<br>Coroa1";
+    } else 
+        echo "<br>Cabeça1";
