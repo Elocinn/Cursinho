@@ -197,6 +197,17 @@
     }
 
 
+    $moeda = [true, false, 1, 0];
+    if ($moeda[1] = true) {
+        echo "<br>Cabeça";
+    } else
+        echo "<br>Coroa";
+
+    if ($moeda[0] = false) {
+        echo "<br>Coroa1";
+    } else
+        echo "<br>Cabeça1";
+
     echo "<br><br>";
     echo "OITAVA PARTE: ARRAY";
     echo "<br>";
@@ -219,13 +230,116 @@
     echo "<br>";
     print_r($num1);
 
-    $moeda = [true,false,1,0];
-    if($moeda[1]=true){
-        echo "<br>Cabeça";
-    }else
-    echo "<br>Coroa";
+    //array associativo, insere a chave e o valor
+    echo "<pre>";
+    echo "<br>";
+    $fifi = ['nome' => 'Fifi', 'especie' => 'Cachorro', 'porte' => 'P', 'cor' => 'Variado'];
+    $gatito = ['nome' => 'Gatito', 'especie' => 'Gato', 'porte' => 'G', 'cor' => 'Branco'];
+    $chico = ['nome' => 'Chico', 'especie' => 'Cachorro', 'porte' => 'M', 'cor' => 'Caramelo'];
 
-    if($moeda[0]=false){
-        echo "<br>Coroa1";
-    } else 
-        echo "<br>Cabeça1";
+    $Pet = [$fifi, $gatito, $chico];
+
+    print_r($Pet);
+
+    /*
+    print_r($cachorro);
+    echo $cachorro['nome'];*/
+
+    //$DonoEPet[$chamada[0],$idades[0],$cachorro['nome']];
+    //Errado
+
+    $Dono = [$chamada, $idades];
+    $DonoEPet = [['dono' => $chamada[0], 'idade' => $idades[0]], 'pet' => $Pet[0]];
+
+    echo "<br><br>";
+    print_r($DonoEPet);
+
+    echo "</pre>";
+    //Exercício 6 
+    $golzinho = [
+        'modelo' => 'Gol',
+        'marca' => 'VW',
+        'ano' => 2008,
+        'manual' => true
+    ];
+
+    if ($golzinho['manual'] = true) {
+        $a = "é";
+    } else {
+        $a = "não é";
+    }
+
+    echo "<br> O modelo do carro é {$golzinho['modelo']}, do ano {$golzinho['ano']}.
+    <br> O carro é da marca {$golzinho['marca']}, assim $a manual";
+    //Exercício 7
+
+    $joao = ['nome' => 'Joao', 'idade' => 21];
+    $maria = ['nome' => 'Maria', 'idade' => 15];
+    $guilherme = ['nome' => 'Guilherme', 'idade' => 17];
+    $ana = ['nome' => 'Ana', 'idade' => 18];
+
+    $nomeClientes = ['Joao', 'Maria', 'Guilherme', 'Ana'];
+    echo "<br>São " . count($nomeClientes) . " pessoas.";
+
+    $idadeClientes = [$joao['idade'], $maria['idade'], $guilherme['idade'], $ana['idade']];
+
+    for ($i = 0; $i < count($idadeClientes); $i++) {
+        if ($idadeClientes[$i] <= 18) {
+            echo "<br>" . $idadeClientes[$i] . " É menor de Idade";
+        } else
+            echo "<br>" . $idadeClientes[$i] . " É maior de Idade";
+    }
+
+    echo "<br><br>";
+    echo "NONA PARTE: OBJETOS";
+    echo "<br>";
+
+    echo "------------------------------------<br>";
+
+    ?>
+
+    <?php
+    //Orietação a objetos
+    //Classes e Objetos
+    //Métodos e Propriedades
+
+    class Pessoa
+    {
+
+        function falar()
+        {
+            echo "Olá pessoal!";
+        }
+    }
+
+    $usuario = new Pessoa();
+
+    $usuario->id = "1";
+
+    echo $usuario->id;
+
+    echo "<br>";
+
+    $usuario->falar();
+
+
+    echo "<br><br>";
+    echo "DECIMA PARTE: NULL";
+    echo "<br>";
+
+    echo "------------------------------------<br>";
+
+    echo NULL;
+
+    $nulo = NULL;
+    $num = 1;
+    echo $nulo;
+
+    if (is_null($nulo)) {
+        echo "<br> É NULL!!!";
+    }
+
+    if (is_null($num)) {
+        echo "<br> É NULL!!!";
+    }
+    ?>
