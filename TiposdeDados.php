@@ -344,10 +344,3 @@
     }
     ?>
 
-    <?php
-    echo "<br><br>";
-    echo "DECIMA PRIMEIRA PARTE: Variáveis";
-    echo "<br>";
-
-    echo "------------------------------------<br>";
-
