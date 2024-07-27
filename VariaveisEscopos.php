@@ -87,25 +87,73 @@ echo "<br>";
 $global = 10;
 echo "Global 1: $global <br>";
 
-function localteste()
+function localteste1()
 {
     $local = 5;
     echo "Local 1: $local <br><br>";
 }
 
-localteste();
+localteste1();
 
 $global = 20;
 
-function localglobalteste1()
+function localteste2()
 {
-    echo "Global 2: $global <br>";
     $local = 15;
     echo "Local 2: $local<br><br>";
 }
+echo "Global 2: $global <br>";
+localteste2();
 
-localglobalteste1();
+/////////////////////////////////////
+$valorglobal = 1;
+echo "$valorglobal <br>"; //é 1
+
+if ($valorglobal = 1){
+    $valorglobal = $valorglobal + 1; 
+}
+
+echo "$valorglobal <br>"; //é 2
+
+function globalteste1(){
+    $valorglobal = 3;
+    echo "$valorglobal <br>";
+}
+globalteste1(); //imprime 3
+
+function globalteste2(){
+    global $valorglobal;
+    $valorglobal = 10;
+}
+
+globalteste2(); //declarou global como 10
+echo $valorglobal;
+echo "<br>";
+
+if ($valorglobal > 11){
+    $valorglobal = $valorglobal + 1;
+}else 
+$valorglobal = $valorglobal - 1;
+
+echo $valorglobal; //substraiu do valor global, e deu 9
+echo "<br> <br>";
+
 //////////////////////////////////////////////////////////////////////////////////
 echo "Static: variável declarada dentro da função, porém ela permanece salvo entre as chamadas de função";
 echo "<br>";
+echo "O valor da mesma é mantido e alterado a cada execução de uma função";
+echo "<br>";
+?>
+
+<?php
+
+function staticteste(){
+    static $valorstatic;
+    $valorstatic = 13.3;
+    print_r($valorstatic);
+}
+
+staticteste();
+echo "<br><br>";
+
 echo "Parâmetro de função: variável passada para uma função, podendo ser utilizada";
