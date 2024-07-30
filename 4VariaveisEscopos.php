@@ -81,7 +81,7 @@ echo "<br><br>";
 
 echo "Global: variável declarada fora da função";
 echo "<br>";
-echo "Não são acessíveis dentro de funções";    
+echo "Não são acessíveis dentro de funções";
 echo "<br>";
 
 $global = 10;
@@ -109,19 +109,21 @@ localteste2();
 $valorglobal = 1;
 echo "$valorglobal <br>"; //é 1
 
-if ($valorglobal = 1){
-    $valorglobal = $valorglobal + 1; 
+if ($valorglobal = 1) {
+    $valorglobal = $valorglobal + 1;
 }
 
 echo "$valorglobal <br>"; //é 2
 
-function globalteste1(){
+function globalteste1()
+{
     $valorglobal = 3;
     echo "$valorglobal <br>";
 }
 globalteste1(); //imprime 3
 
-function globalteste2(){
+function globalteste2()
+{
     global $valorglobal;
     $valorglobal = 10;
 }
@@ -130,10 +132,10 @@ globalteste2(); //declarou global como 10
 echo $valorglobal;
 echo "<br>";
 
-if ($valorglobal > 11){
+if ($valorglobal > 11) {
     $valorglobal = $valorglobal + 1;
-}else 
-$valorglobal = $valorglobal - 1;
+} else
+    $valorglobal = $valorglobal - 1;
 
 echo $valorglobal; //substraiu do valor global, e deu 9
 echo "<br> <br>";
@@ -147,15 +149,35 @@ echo "<br>";
 
 <?php
 
-static $valorstatic = 0;
+function staticteste()
+{
+    $valorstatic = 12;
+    $valorstatic++;
+    echo "$valorstatic <br>";
+}
 
-function staticteste(){
+staticteste();
+staticteste();
+staticteste();
+
+echo "<br>";
+function staticteste1()
+{
     static $valorstatic1 = 13;
     $valorstatic1++;
     echo "$valorstatic1 <br>";
 }
-staticteste();
-staticteste();
-staticteste();
+staticteste1();
+staticteste1();
+staticteste1();
 
 echo "Parâmetro de função: variável passada para uma função, podendo ser utilizada";
+echo "<br> São considerados tipos de variáveis. São funções com valores dinamicos.";
+
+function somaParametrosFunc($x, $y)
+{
+    $z = $x + $y;
+    echo "<br> $z";
+}
+
+somaParametrosFunc(1,2);
