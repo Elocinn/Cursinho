@@ -147,13 +147,15 @@ echo "<br>";
 
 <?php
 
-function staticteste(){
-    static $valorstatic;
-    $valorstatic = 13.3;
-    print_r($valorstatic);
-}
+static $valorstatic = 0;
 
+function staticteste(){
+    static $valorstatic1 = 13;
+    $valorstatic1++;
+    echo "$valorstatic1 <br>";
+}
 staticteste();
-echo "<br><br>";
+staticteste();
+staticteste();
 
 echo "Parâmetro de função: variável passada para uma função, podendo ser utilizada";
