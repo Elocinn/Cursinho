@@ -61,7 +61,42 @@ echo "------------------------------------<br>";
 //bagulho de achar número par e impar
 
 if (12 % 2 == 0) {
-    echo "é par";   
-} else {
-    echo "é ímpar";
+    echo "é par". "<br>";   
+} else {            
+    echo "é ímpar" . "<br>";
+}
+
+///Exercício 13
+$naoexato = 13;
+$exato = 15;
+
+echo "Não é exato " . $naoexato%5 . "<br>";
+echo "É exato " . $exato%5 . "<br>"; 
+
+echo "<br><br>";
+echo "Operador de Exponenciação";
+echo "<br>";
+
+echo "------------------------------------<br>";
+//exponente **
+//concatenação de string .
+
+echo "5 (cinco) elevado a 2 (dois) é igual a " . 5**2 . "<br>";
+
+$nome = "Nicole";
+$sobrenome = "Lisboa";
+
+$welcome = "Welcome ". $nome . " " . $sobrenome;
+echo $welcome. "<br>";
+
+//autoincremento e decremento ++ -- 
+$fila = 0;
+
+for ($i = 1; $i <= 10; $i++) {
+    $fila++;
+    echo $fila . "<br>"         ;
+
+    if ($fila == 10) {
+        echo "Fila cheia\n";
+    }
 }
